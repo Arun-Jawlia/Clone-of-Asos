@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    /* font-family: 'Questrial'; */
+    padding: 0px;
+}
+
+/* First row Style in the nav bar */
+#row1{
+    display: flex;
+    height: 36px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+#row1>div>a{
+    text-decoration: none;
+    color: #666;
+}
+#row1>div:nth-child(1){
+    position: relative;
+    height: 25px;
+    left: 1100px;
+    border: 1px solid rgb(218, 218, 218);
+    padding: 5px 20px;
+}
+#row1>div:nth-child(2){
+    position: relative;
+    height: 25px;
+    left: 1100px;
+    border: 1px solid rgb(218, 218, 218);
+    padding: 5px 20px;
+}
+.icon{
+    position: relative;
+    height: 20px;
+    left: 1100px;
+    padding: 7.5px 20px;
+    width: 20px;
+    border: 1px solid rgb(218, 218, 218);
+}
+
+/* Second row of navbar has been styled over here  */
+
+
+#row2{
+    height: 60px;
+    background-color: #2d2d2d;
+}
+
+#row2div{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 60px;
+    
+}
+
+#row2div>div{
+    border-right: #525050 1px solid;
+    text-align: center;
+}
+
+#row2div>div>a{
+    text-decoration: none;
+    color: white;
+
+}
+
+span{
+    margin: 15px 10px 0 0;
+    width: 25px;
+}
+
+#row2div>div:nth-child(1){
+    width: 9%;
+    font-size: 40px;
+    font-family: 'Questrial', sans-serif;
+    
+}
+#row2div>div:nth-child(2){
+    width: 8%;
+    font-size: 18px;
+    font-family: 'Questrial', sans-serif; padding-top: 15px;
+}
+#row2div>div:nth-child(3){
+    width: 8%;
+    font-size: 18px;
+    font-family: 'Questrial', sans-serif; padding-top: 15px;
+}
+#row2div>div:nth-child(4){
+    width: 58%;
+    padding: 10px;
+    border-right: 0px;
+}
+
+#row2div>div:nth-child(4)>input{
+    width: 92%;
+    height: 40px;
+    border-radius: 20px;
+    border: 0px ;
+    padding-left: 20px;
+}
+
+#row2div>div:nth-child(5){
+    width: 4%;
+    border-right: 0px;
+    padding-top: 5px;
+}
+#row2div>div:nth-child(6){
+    width: 4%;
+    border-right: 0px;
+    padding-top: 5px;
+}
+#row2div>div:nth-child(7){
+    width: 4%;
+    border-right: 0px;
+}
+#row2div>div:nth-child(7)>a>img{
+    width: 30px;
+    border-right: 0px;
+}
+
+#hidden_div{
+    display: none;
+    width: 90%;
+    margin: auto;
+    background-color: white;
+}
+
+/* Third row of navbar has been styled over here  */
+
+
+#row3{
+    background-color: #525050;
+}
+#row3div{
+    width: 87%;
+    margin: auto;
+    display: flex;
+    height: 45px;
+    font-family: 'Questrial', sans-serif;
+}
+
+#row3div>div{
+    padding: 10px 0;
+}
+#row3div>div>a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+}
+
+.drop-down{
+    width: 8%;
+    color: white;
+    text-align: center;
+}
+.win6{
+    width: 6%;
+    color: white;
+    text-align: center;
+}
+.wid5{
+    width: 5%;
+    color: white;
+    text-align: center;
+}
+.win9{
+    width: 9%;
+    color: white;
+    text-align: center;
+}
+
+/*Navbar dropdown and hover effect */
+
+.drop-down {
+    position: relative;
+    display: inline-block;
+}
+.drop-down:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+.drop-down:hover > #sales{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    transform: skew(0deg);
+}
+.drop-down:hover > #outlet{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    transform: skew(0deg);
+}
+.drop-down:hover > .dropdown-content{
+    display: block;
+    width: 2000%;
+}
+
+.dropdown-content:hover{
+    display: block;
+}
+
+
+.dropdown-content {
+    display: none;
+    width: 87%;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    margin-top: 7px;
+    line-height: 20px;
+    min-width: auto;
+}
+
+#row3div>:nth-child(2):hover .dropdownflex{
+    position: absolute;
+    left: -67px; 
+    width: 100.2%;
+}
+#row3div>:nth-child(3):hover .dropdownflex{
+    position: absolute;
+    left: -132px; 
+    width: 83.45%;
+}
+#row3div>:nth-child(4):hover .dropdownflex{
+    position: absolute;
+    left: -212px; 
+    width: 100.15%;
+}
+#row3div>:nth-child(5):hover .dropdownflex{
+    position: absolute;
+    left: -278px; 
+    width: 62.6%;
+}
+#row3div>:nth-child(6):hover .dropdownflex{
+    position: absolute;
+    left: -384px; 
+    width: 62.6%;
+}
+#row3div>:nth-child(7):hover .dropdownflex{
+    position: absolute;
+    left: -490px; 
+    width: 83.5%;
+}
+#row3div>:nth-child(8):hover .dropdownflex{
+    position: absolute;
+    left: -569px; 
+    width: 55.65%;
+}
+#row3div>:nth-child(9):hover .dropdownflex{
+    position: absolute;
+    left: -688px;
+    width: 83.5%;
+}
+#row3div>:nth-child(10):hover .dropdownflex{
+    position: absolute;
+    left: -767px;
+    width: 62.6%; 
+}
+#row3div>:nth-child(11):hover .dropdownflex{
+    position: absolute;
+    left: -873px; 
+    width: 83.4%;
+}
+#row3div>:nth-child(12):hover .dropdownflex{
+    position: absolute;
+    margin: 2px;
+    left: -953px;
+    width: 83.4%; 
+}
+#row3div>:nth-child(13):hover .dropdownflex{
+    position: absolute;
+    left: -1032px; 
+    width: 62.6%;
+}
+
+
+
+.dropdownflex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+.dropdownflex>div {
+    /* border: 1px solid black; */
+    width: 190px;
+    height: auto;
+    padding: 20px;
+    margin: 10px;
+}
+
+.dropdownflex>div>div {
+    font-size: 11px;
+    color: black;
+    font-weight: 100;
+}
+
+.dropdownflex>div>h4 {
+    text-decoration: underline;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.dropdownflex>div>div{
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.dropdownflex>div>div:hover {
+    color: rgb(72, 39, 206);
+}
+
+
+/* Shirts anchor */
+#shirts a
+{
+    text-decoration: none;
+    color: #666666;
+}
+
+
+
+.navimg{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.navimg>div{
+    text-align: center;
+}
+
+.navimg>div>img{
+    width: 70%;
+    border-radius: 50px;
+}
+
+
+.rhombus{    
+    transform: skew(-12deg);
+    padding: 13.5px 0;
+    margin: -10px 0;
+    background-color: #d01345;
+}
+
+.new>div>div>img{
+    width: 150%;
+}
+.imglist>div>a>img{
+    width: 75%;
+    border-radius: 50%;
+}
+.imglist>div{
+    display: flex;
+    gap: 10px;
+}
+.imglist>div>a{
+    width: 40%;
+}
+.imglist>div>p{
+    margin-top: 20px;
+}
+.horimg>img{
+    width: 120%;
+}
+.middle div:nth-child(1){
+    font-weight: 100;
+    font-size: 12px;
+    padding-top: 5px;
+    font-family:  'Questrial', sans-serif;
+}
+
+#sales, #outlet{
+    padding-top: 17.5px;
+    font-size: 14px;
+}
