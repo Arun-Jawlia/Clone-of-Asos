@@ -1,0 +1,122 @@
+
+body{
+    font-family: futura-pt,sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+#nav3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 50px;
+    background-color: #ff385c;
+}
+#nav3>:nth-child(1){
+    border: 2px solid black;
+    padding: 3px 7px 3px 7px;
+    cursor: pointer;
+}
+#nav3>:nth-child(3){
+    border: 2px solid black;
+    padding: 3px 15px 3px 15px;
+    cursor: pointer;
+}
+#nav3>:nth-child(2){
+    text-align: center;
+    
+}
+#appendhere{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    width: 85%;
+    margin: auto;
+}
+
+#appendhere img{
+    width: 100%;
+}
+
+.mydiv>img{
+    margin-bottom: 5px;
+}
+.mydiv>img+p{
+    margin-bottom: 5px;
+}
+.mydiv>img+p+p{
+    margin-bottom: 5px;
+}
+#item{
+    width: 100%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 15px;
+   height: 70px;
+}
+.dlT{
+    position: relative;
+    bottom: 325px;
+    left: 270px;
+    border: none;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.mytitle{
+   
+    color: #434448;
+    font-size: 14px;
+}
+.mtb{
+    border: 2px solid #018849;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: -160px;
+}
+.mtb>p{
+    font-weight: 500;
+    font-size: 14px;
+}
+#filter{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+   
+}
+#filter>select{
+    font-weight: bold;
+    border: none;
+    padding-right: 25px;
+    cursor: pointer;
+}
+option:hover{
+    background-color: blue  
+}
+#empty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+#empty>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,0 +1,213 @@
+*{
+    font-family: 'Questrial', sans-serif;
+}
+#homeR{
+    background-color: #FF4163;
+}
+#homeRow1{
+    height: 50px;
+    width: 87%;
+    display: flex;
+    margin: auto;
+    
+}
+
+#homeRow1>div:nth-child(1){
+    width: 8%;
+    text-align: center;
+    padding-top: 12px;
+}
+#homeRow1>div:nth-child(2){
+    width: 84%;
+    text-align: center;
+}
+#homeRow1>div:nth-child(3){
+    width: 8%;
+    text-align: center;
+    padding-top: 12px;
+}
+#homeRow1>div:nth-child(1)>a,#homeRow1>div:nth-child(3)>a{
+    text-decoration: none;
+    font-size: 14px;
+    
+    padding: 2px 15px;
+    color: black;
+    border: solid 2px black;
+}
+#homeRow1>div:nth-child(3)>a{
+    padding: 2px 25px;
+}
+
+#homeRow1>div:nth-child(2)>a{
+    font-size: 14px;
+    letter-spacing: 2px;
+    
+    text-decoration: none;
+    color: black;
+}
+
+/* home page main content started from here */
+
+#homeR2{
+    margin-top: 2px;
+    background-image:linear-gradient(to right, #FF3F62, #FE6A8C) ;
+}
+
+#homeRow2{
+    width: 90%;
+    margin: 2px auto;
+    text-align: center;
+}
+#saleBtn{
+    padding-top: 30px;
+}
+#saleBtn>a{
+    width: 20%;
+    margin-top: 25px;
+    font-size: 38px;
+    background-color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 0px;
+    border-radius: 25px;
+    padding: 2px 80px;
+}
+#saleBtn>h1{
+    font-size: 65px;
+    padding: 0;
+    letter-spacing: 5px;
+    font-family: 'Passion One', cursive;
+}
+#categoryGrid{
+    margin-top: 20px;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 20px;
+}
+#categoryGrid>div{
+    background-color: white;
+    
+}
+#categoryGrid>div:hover{
+    transform: scale(1.05);
+    transition: all .5s ease 0s;
+    
+}
+#categoryGrid>div:first-child>img, #categoryGrid>div:first-child{
+    width: 15px;
+    background-color: #FF3F62;
+}
+#categoryGrid>div:first-child>img{
+    margin-top: 140px;
+}
+#categoryGrid>div:last-child>img, #categoryGrid>div:last-child{
+    width: 15px;
+    background-color: #FE6A8C;
+}
+#categoryGrid>div:last-child>img{
+    margin-top: 140px;
+    margin-left: 43px;
+}
+#homeRow2>button{
+    width: 15%;
+    margin: 25px 0;
+    font-size: 18px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 0px;
+    padding: 15px 0;
+}
+#homeRow2>button:hover{
+    width: 15%;
+    margin: 25px 0;
+    font-size: 18px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 0px;
+    padding: 15px 0;
+    background-color: black;
+    color: white;
+    transition: 400ms;
+}
+#homeR3{
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+#homeR4{
+    width: 83%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    
+    text-align: center;
+}
+#homeR4>div>a>img{
+    width: 100%;
+}
+#homeR5{
+    text-align: center;
+    margin: 50px 0;
+}
+#homeR6{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+#homeR6>div>a>img{
+    width: 100%;
+}
+#homeR6>div>a{
+    text-decoration: none;
+    color: black;
+}
+#homeR6>div>a>p{
+    margin: 10px;
+}
+
+#homeR6>div>button{
+    width: 35%;
+    margin: 25px 0;
+    font-size: 18px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    padding: 15px 0;
+    background-color: white;
+}
+#homeR6>div>button:hover{
+    width: 35%;
+    margin: 25px 0;
+    font-size: 18px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    padding: 15px 0;
+    background-color: black;
+    color: white;
+    transition: 400ms;
+}
+#homeR7{
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+#homeR7grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 20px;
+}
+#homeR7grid>div>a>img{
+    width: 100%;
+}
+#homeR7grid>div>a>img:hover{
+    transform: scale(1.05);
+    transition: all .5s ease 0s;
+}
+#homeR4>div:hover{
+    transform: scale(1.05);
+    transition: all .5s ease 0s;
+}

@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: futura-pt,sans-serif;
+}
+#empty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    width: 23%;
+    text-align: center;
+   
+}
+#empty>div{
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#empty>div>i+h2+p{
+    font-size: 13px;
+}
+#container{
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+#div1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   width: 58%;
+   height: 70px;
+   
+   
+}
+#div1>h1{
+    font-size: 17px;
+    margin-left: -80px;
+}
+#div1>h1+p{
+    font-size: 12px;
+    margin-right: -80px;
+   
+}
+#div2{
+width: 32%;
+margin-left: 550px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+margin-top: -69px;
+padding: 25px;
+display: flex;
+flex-direction: column;
+}
+#div2>h3{
+    margin-bottom: 20px;
+}
+div+div+select{
+    border: none;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+#div2>h3+div{
+ display: flex; 
+ justify-content: space-between;
+ margin-bottom: 5px;
+}
+#div2>h3+div+div{
+ display: flex; 
+ justify-content: space-between;
+ margin-bottom: 12px;
+
+}
+div+div+select+hr{
+    margin-bottom: 12px;
+}
+#chk{
+    background-color: #018849;
+    color: white;
+    padding: 13px 0px 13px 0px;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+#chk:hover{
+    background-color: rgb(209, 58, 58);
+}
+hr+button+h5{
+    margin-bottom: 6px;
+}
+hr+button+h5+img{
+    width: 60%;
+    margin-bottom: 8px;
+}
+hr+button+h5+img+p{
+    font-size: 14px;
+}
+#subtotal{
+    width: 58%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   height: 70px;
+}
+#subtotal>h4+p{
+    margin-right: -300px;
+}
+#subtotal>h4{
+    margin-right: -620px;
+}
+#appendhere{
+    width: 58%;
+    margin-top: -225px;
+   
+   
+}
+#appendhere>div{
+    display: flex;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    
+}
+.mytext{
+    margin-left: -140px;
+    width: 100%;
+}
+.mytext>h4{
+    margin-bottom: 5px;
+}
+.mytext>h4+p{
+    color: #2d2d2d;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+#chk a 
+{
+    text-decoration: none;
+    color:white;
+}
