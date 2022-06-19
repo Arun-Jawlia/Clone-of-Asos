@@ -1,0 +1,268 @@
+/* Home Men Shirt */
+body
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#HMS
+{
+    display: flex;
+    /* border-bottom: 1px solid black;  */
+    /* border-top: 1px solid black;  */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+
+}
+#HMS div{
+    padding-left: 15px;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px;
+    /* color: gray; */
+}
+#HMS div a 
+{
+    text-decoration: none;
+    color: rgb(58, 56, 56);
+}
+
+/* Men's Shirt Text */
+
+.text_align{
+    text-align: center;
+}
+#Men_shirt{
+    /* border: 1px solid black; */
+    width: 90%;
+    margin: auto;
+}
+.padding-right-left
+{
+    width: 80%;
+    padding: 0px 30px 0px 30px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 100;
+    margin: auto;
+    /* font-family: sans-serif; */
+
+    
+}
+
+
+/* Div of types of shirt */
+
+#shirt-type
+{
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+    /* width: 100%; */
+    margin: auto;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 2px solid #EEEEEE;
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+}
+
+.shirt-type
+{
+    /* border: 1px solid black; */
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 12px;
+    background-color: #EEEEEE;
+    font-weight: 600;
+    color: black;
+    font-family: sans-serif;
+    /* font-weight: bolder; */
+    cursor: pointer;
+
+}
+
+.shirt-type:hover{
+    background-color: rgb(221, 217, 217);
+    color: rgb(137, 137, 250);
+    /* opacity: 1; */
+}
+
+
+
+
+
+
+
+/* Filter Option */
+#filter-container
+{
+    /* border: 1px solid black; */
+    background-color: rgb(247, 242, 242);
+}
+
+#box1
+{
+    width: 90%;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+    margin: auto;
+    padding: 10px ;
+    
+    
+}
+
+.filter-option{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #bfbebe;
+    border-bottom: 1px solid #bfbebe;
+    color: #666666;
+
+    padding: 8px 0px 8px 0px;
+    cursor: pointer;
+    font-weight: bolder;
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+    
+
+}
+
+.filter-option:hover
+{
+    color: rgb(57, 57, 246);
+}
+
+.material-symbols-outlined
+{
+    display: inline-block;
+}
+
+
+
+/* Drop down effect */
+
+.drop-down1 {
+    position: relative;
+    display: inline-block;
+
+}
+
+
+
+
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    line-height: 20px;
+    /* margin-top: 11px; */
+    /* margin-left: -100px; */
+    min-width: auto;
+    /* width: 150px; */
+    height: auto;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+
+
+
+}
+
+
+
+.drop-down1:hover .dropdown-content1 {
+
+    display: block;
+}
+
+
+.dropdownflex1 {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+}
+.dropdownflex1 div{
+    background-color: rgb(255, 252, 252);
+}
+
+.dropdownflex1 div>div{
+    /* border: 1px solid black; */
+    padding: 15px ;
+    width: 190px;
+    margin-top: 10px;
+    color: #2d2d2d;
+}
+
+.drop-down1>div>div  :hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+
+
+
+
+.arrow-span 
+{
+    display: inline;
+    margin-top: -20px;
+}
+
+
+
+/* Product */
+#containers
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    
+    width: 95%;
+    margin: auto;
+    line-height: 25px;
+
+}
+#containers div{
+    cursor: pointer;
+    margin-bottom:5px;
+}
+
+#containers div>p
+{
+    font-size: 14px;
+    color: #2d2d2d;
+}
+
+#containers div img{
+    width: 100%;
+
+}
+
+
+/* You have viewed */
+.fontsize-12
+{
+font-size: 14px;
+}
+
+
+
+/* lOAD MORE */
+
+#loadmore
+{
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#loadmore p{
+    font-weight: 800;
+    display: inline;
+    border: 1px solid black;
+    padding: 10px ;
+    cursor: pointer;
+}
