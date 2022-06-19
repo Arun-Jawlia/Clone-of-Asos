@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothes | Shop for Men's Fashion | ASOS</title>
+    <link rel="stylesheet" href="../Construct Week 2/Style/navbar.css">
+    <link rel="stylesheet" href="./Style/favorite.css">
+    <link rel="stylesheet" href="./Style/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@3500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="icons\icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,700,1,-25" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,700,0,200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,200" />
+</head>
+<body>
+    <div id="navbar">
+        
+    </div>
+    
+    <div id="nav2"></div>
+    <div id="nav3">
+        <div>WOMEN</div>
+        <div>SALE: UP TO 70% OFF! <br> 
+            IT'S CALLED BIG DISCOUNT ENERGY </div>
+        <div>MEN</div>
+    </div>
+    <div id="item">
+        <h2 id="myheading"></h2>
+    </div>
+    <div id="filter">
+        
+    </div>
+    <div id="appendhere">
+        
+
+    </div>
+    <div id="empty"></div>
+    <div id="footer">
+        
+    </div>
+</body>
+</html>
+<script type="module">
+    import {navbar, footer} from "../Construct Week 2/component/navbar_footerExpo.js"     
+    console.log(footer)
+    
+    document.querySelector("#navbar").innerHTML = navbar()
+    document.querySelector("#footer").innerHTML = footer()
+//     var favorite=[{img:'https://images.asos-media.com/products/topman-skinny-suit-trousers-in-stone-herringbone/201346329-1-stone?$n_320w$&wid=317&fit=constrain',price:'50',title:'Topman skinny suit trousers in stone herringbone'},{img:'https://images.asos-media.com/products/topman-skinny-suit-trousers-in-stone-herringbone/201346329-1-stone?$n_320w$&wid=317&fit=constrain',price:'50',title:'Topman skinny suit trousers in stone herringbone'}]
+// localStorage.setItem('favorite',JSON.stringify(favorite));
+let arr=JSON.parse(localStorage.getItem('myfavourite'));
+func(arr);
+function func(data){
+    var container=document.getElementById('appendhere');
+    if(data.length!==0){
+        var count=0;
+        document.getElementById('item').style.backgroundColor='#eeeeee';
+        document.getElementById('myheading').innerText='Saved Items';
+        data.forEach(function(element,index){
+            ++count;
+            let div=document.createElement('div');
+            div.setAttribute('class','mydiv');
+            let img=document.createElement('img');
+            img.src=element.image;
+            let dltdiv=document.createElement('button');
+            dltdiv.setAttribute('class','dlT')
+            let _i=document.createElement('i');
+            _i.setAttribute('class','material-icons');
+            _i.innerText='delete';
+            dltdiv.append(_i);
+            dltdiv.addEventListener('click',function()
+            {
+                mydelfunc(element,index)
+            });
+          
+            let _p=document.createElement('p');
+            _p.setAttribute('class','mytitle')
+            _p.innerText=element.title;
+            let p1=document.createElement('p');
+            p1.innerText=`$ ${element.price}`;
+            let hr=document.createElement('hr');
+            let move_to_bag=document.createElement('div');
+            move_to_bag.setAttribute('class','mtb');
+            move_to_bag.addEventListener('click',mtb);
+            function mtb(){
+                var myarr=JSON.parse(localStorage.getItem('mycart'));
+                myarr.push(element)
+                localStorage.setItem('mycart',JSON.stringify(myarr))
+                data.splice(index,1);
+                localStorage.setItem('favorite',JSON.stringify(arr))
+                window.location.reload();
+            }
+            let mtb_p=document.createElement('h5');
+            mtb_p.innerText='MOVE TO BAG';
+            move_to_bag.append(mtb_p);
+            div.append(img,_p,p1,hr,move_to_bag,dltdiv);
+            container.append(div);
+            console.log('pawan')
+            
+        });
+        
+        let filter=document.getElementById('filter');
+        let select=document.createElement('select');
+        let op1=document.createElement('option')
+        op1.setAttribute('value','recent');
+        op1.innerText='Recently added';
+        let op2=document.createElement('option')
+        op1.setAttribute('value','hTol')
+        op2.innerText='Price: hight to low';
+        let op3=document.createElement('option')
+        op3.setAttribute('value','lToh')
+        op3.innerText='Price: low to hight';
+        let op4=document.createElement('option')
+        op4.setAttribute('value','aToz')
+        op4.innerText='Brand A-Z';
+        let op5=document.createElement('option')
+        op4.setAttribute('value','zToa')
+        op5.innerText='Brand Z-A';
+       
+        let totalitems=document.createElement('p') ;
+        totalitems.style.fontSize='12px'
+        totalitems.style.color='#2d2d2d'
+        var temp;
+        if(data.length==1){
+            temp='item';
+        }
+        if(data.length>1){
+            temp='items';
+        }
+       
+        totalitems.innerText=count+' '+temp;
+        select.append(op1,op2,op3,op4,op5);
+        console.log(select.value);
+        filter.append(select,totalitems);
+       
+        
+    }
+    else{
+        let _div=document.createElement('div');
+        let i=document.createElement('i');
+        i.setAttribute('class','material-icons');
+        i.innerText='favorite';
+        i.style.textAlign='center'
+        let h2=document.createElement('h2')
+        h2.innerText="You have no Saved Items"
+        _div.append(i,h2);
+        document.getElementById('empty').append(_div);
+
+    }
+    
+   
+    
+}
+function mydelfunc(element,index)
+{
+    event.preventDefault()
+    console.log('someone clicked me')
+                arr.splice(index,1);
+                localStorage.setItem('myfavourite',JSON.stringify(arr))
+                window.location.reload();
+
+}
+
+    // console.log(footer)
+</script>

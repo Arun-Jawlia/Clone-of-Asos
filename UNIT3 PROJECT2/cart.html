@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothes | Shop for Men's Fashion | ASOS</title>
+    <link rel="stylesheet" href="../Construct Week 2/Style/navbar.css">
+    <link rel="stylesheet" href="./Style/cart.css">
+    <link rel="stylesheet" href="./Style/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@3500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="icons\icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,700,1,-25" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,700,0,200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,200" />
+</head>
+<body>
+    <div id="navbar">
+        
+    </div>
+    <div id="container">
+        <div id="total">
+           <div id="div1">
+               <h1>MY BAG</h1>
+           <p>Items are reserved for 60 minutes</p>
+           </div>
+           <div id="div2">
+               <h3>TOTAL</h3>
+               <div>
+                   <h4>Sub-total</h4>
+                   <p id="_total"></p>
+               </div>
+               <div>
+                   <h4>Delivery</h4>
+                   <p>⊝</p>
+               </div>
+               <select name="" id="">
+                   <option value="">Standard Delivery (Free)</option>
+               </select>
+               <hr>
+               <button id="chk"><a href="../Unit-3 project ASOS/checkout_page.html">CHECKOUT</a></button>
+               <h5>WE ACCEPT:</h5>
+               <img src="https://assets.asosservices.com/asos-finance/images/marketing/single.png" alt="">
+               <p>Got a discount code? Add it in the next step.</p>
+           </div>
+           <div id="appendhere">
+               
+           </div>
+           <div id="subtotal">
+               <h4>SUB-TOTAL </h4>
+               <p id="mytotal"></p>
+           </div>
+           
+        </div>   
+       </div>
+       <div id="empty"></div>  
+    <div id="footer">
+        
+    </div>
+</body>
+</html>
+<script type="module">
+    import {navbar, footer} from "../Construct Week 2/component/navbar_footerExpo.js" ;
+    document.querySelector("#navbar").innerHTML = navbar()    
+//     var cart=[{img:'https://images.asos-media.com/products/topman-skinny-suit-trousers-in-stone-herringbone/201346329-1-stone?$n_320w$&wid=317&fit=constrain',price:'50',title:'Topman skinny suit trousers in stone herringbone'},{img:'https://images.asos-media.com/products/topman-skinny-suit-trousers-in-stone-herringbone/201346329-1-stone?$n_320w$&wid=317&fit=constrain',price:'50',title:'Topman skinny suit trousers in stone herringbone'}]
+// localStorage.setItem('mycart',JSON.stringify(cart));
+var arr=JSON.parse(localStorage.getItem('mycart'))||[];
+console.log(arr)
+func(arr);
+function func(data){
+
+    
+    if(data.length!==0){
+        var mycontainer=document.getElementById('appendhere')
+        var count=0;
+        data.forEach(function(element,index){
+           count+=+element.price;
+           let mydiv=document.createElement('div');
+           let imgdiv=document.createElement('div');
+
+           let img=document.createElement('img');
+           img.src=element.image
+           imgdiv.append(img);
+        
+        //    img.src=element.img;
+           img.style.width='35%'
+           let textdiv=document.createElement('div');
+           textdiv.setAttribute('class','mytext');
+           let p1=document.createElement('h4')
+           p1.innerText=`Rs. ${element.price}`;
+           let p2=document.createElement('p');
+           p2.innerText=element.title;
+           let select=document.createElement('select');
+           select.style.border='none';
+           let op1=document.createElement('option');
+           op1.innerText='1';
+           let op2=document.createElement('option');
+           op2.innerText='2';
+           let op3=document.createElement('option');
+           op3.innerText='3';
+           let op4=document.createElement('option');
+           op4.innerText='4';
+           let op5=document.createElement('option');
+           op5.innerText='5';
+           select.append(op1,op2,op3,op4,op5);
+           let _select=document.createElement('select');
+           let _op1=document.createElement('option');
+           _op1.innerText='X'
+           let _op2=document.createElement('option');
+           _op2.innerText='2XS'
+           let _op3=document.createElement('option');
+           _op3.innerText='S'
+           let _op4=document.createElement('option');
+           _op4.innerText='M'
+           let _op5=document.createElement('option');
+           _op5.innerText='L'
+           _select.style.border='none';
+           _select.style.marginRight='10px'
+           _select.style.marginTop='10px'
+           _select.append(_op1,_op2,_op3,_op4,_op5);
+           textdiv.append(p1,p2,_select,select);
+        
+           let _remove=document.createElement('i')
+           _remove.setAttribute('class','material-icons');
+           _remove.innerText='close';
+           _remove.style.cursor='Pointer'
+           _remove.addEventListener('click',dlT);
+           function dlT(){
+                data.splice(index,1);
+                localStorage.setItem('mycart',JSON.stringify(arr));
+                window.location.reload();
+           }
+           mydiv.append(imgdiv,textdiv,_remove);
+           mycontainer.append(mydiv);
+
+        });
+        document.getElementById('_total').innerHTML=`Rs. ${count}`
+        localStorage.setItem('totalprice', JSON.stringify(count))
+        document.getElementById('mytotal').innerText=`Rs. ${count}`
+        
+        
+    }
+    
+    else{
+        document.getElementById('container').innerHTML=null;
+        let _div=document.createElement('div');
+        let i=document.createElement('i');
+        i.setAttribute('class','material-icons');
+        i.innerText='work';
+        let h2=document.createElement('h2')
+        h2.innerText="Your bag is empty"
+        let p=document.createElement('p')
+        p.innerText=`Items remain in your bag for 60 minutes, and then  theyre moved to your Saved Items.`
+        _div.append(i,h2,p);
+       document.getElementById('empty').append(_div);
+
+    }
+    
+}
+    console.log(footer)
+    document.querySelector("#footer").innerHTML = footer()
+</script>
