@@ -18,7 +18,6 @@
       else if(ASOSdata.email == data.email && ASOSdata.password == data.password){
           alert("login Successful");
           localStorage.setItem("signin",JSON.stringify(ASOSdata));
-          window.location.href='../Construct Week 2/index.html'
       }
       else{
           alert("User data does not exist please check before you Enter ");
